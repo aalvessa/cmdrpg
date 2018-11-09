@@ -33,7 +33,7 @@ public class EventEngine {
     private void reactToEvent(final Battle event, final Player player) {
 
         if(event.getEnemy().getHealth() <= 0){
-            CommandLineUtils.print("There is a dead " + event.getEnemy().getName() + " here");
+            CommandLineUtils.print(String.format("There is a dead %s here", event.getEnemy().getName()));
             return;
         }
         CommandLineUtils.print(String.format("You are in a fight against an %s",  event.getEnemy().getName()));
@@ -53,7 +53,7 @@ public class EventEngine {
         reactToEvent(event, player);
     }
 
-    private BattleContext doEventAction(Battle event, Player player, BattleContext battleContext) throws ArgumentNotAllowedException {
+    private BattleContext doEventAction(final Battle event, final Player player, BattleContext battleContext) throws ArgumentNotAllowedException {
         Integer command = CommandPanel.readAndCheckNavigation();
         battleContext.setPlayer(player);
         battleContext.setCommandAction(command);

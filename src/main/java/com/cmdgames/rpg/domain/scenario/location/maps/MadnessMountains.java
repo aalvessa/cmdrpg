@@ -10,6 +10,7 @@ import com.cmdgames.rpg.domain.scenario.location.Place;
 public final class MadnessMountains extends Map {
 
 
+    @Override
     protected Place[][] createMapLayout() {
         Place[][] map = {
                 getFirstLevelMap(),
