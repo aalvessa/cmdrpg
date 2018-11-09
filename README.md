@@ -1,4 +1,4 @@
-# cmdrpg
+# CmdRpg
 This project is a command line game, based on "At the mountains of madness" tale.
 To run the project use "mvn clean package", and java -jar for target/rpg-1.0-SNAPSHOT
 
